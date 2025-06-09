@@ -15,6 +15,12 @@ int main() {
         }
     }
 
+    // Coordenadas iniciais dos navios
+    int linha_horizontal = 2;
+    int coluna_horizontal = 4;
+
+    int linha_vertical = 5;
+    int coluna_vertical = 1;
    
 
     return 0;
