@@ -38,5 +38,21 @@ int main() {
         }
     }
 
+     // Posiciona navio vertical, se couber e não sobrepuser
+    if (linha_vertical + TAMANHO_NAVIO <= TAMANHO_TABULEIRO) {
+        int pode_posicionar = 1;
+        for (int i = 0; i < TAMANHO_NAVIO; i++) {
+            if (tabuleiro[linha_vertical + i][coluna_vertical] == VALOR_NAVIO) {
+                pode_posicionar = 0;
+                break;
+            }
+        }
+        if (pode_posicionar) {
+            for (int i = 0; i < TAMANHO_NAVIO; i++) {
+                tabuleiro[linha_vertical + i][coluna_vertical] = VALOR_NAVIO;
+            }
+        }
+    }
+
     return 0;
 }
