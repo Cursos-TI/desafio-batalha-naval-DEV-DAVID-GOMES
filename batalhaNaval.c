@@ -60,6 +60,25 @@ int main() {
         }
     }
 
+      // Posiciona navio na diagonal principal (↘), se couber e não sobrepuser
+    if (linha_diag_principal + TAMANHO_NAVIO <= TAMANHO_TABULEIRO &&
+        coluna_diag_principal + TAMANHO_NAVIO <= TAMANHO_TABULEIRO) {
+
+        int pode_posicionar = 1;
+        for (int i = 0; i < TAMANHO_NAVIO; i++) {
+            if (tabuleiro[linha_diag_principal + i][coluna_diag_principal + i] == VALOR_NAVIO) {
+                pode_posicionar = 0;
+                break;
+            }
+        }
+
+        if (pode_posicionar) {
+            for (int i = 0; i < TAMANHO_NAVIO; i++) {
+                tabuleiro[linha_diag_principal + i][coluna_diag_principal + i] = VALOR_NAVIO;
+            }
+        }
+    }
+
      // Imprime as letras das colunas (A a J)
     printf("   ");
     for (char letra = 'A'; letra < 'A' + TAMANHO_TABULEIRO; letra++) {
