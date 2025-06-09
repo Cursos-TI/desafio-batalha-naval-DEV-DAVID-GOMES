@@ -21,6 +21,12 @@ int main() {
 
     int linha_vertical = 5;
     int coluna_vertical = 1;
+
+    int linha_diag_principal = 0;
+    int coluna_diag_principal = 0;
+
+    int linha_diag_secundaria = 0;
+    int coluna_diag_secundaria = TAMANHO_TABULEIRO - 1;
     
      // Posiciona navio horizontal, se couber e não sobrepuser
     if (coluna_horizontal + TAMANHO_NAVIO <= TAMANHO_TABULEIRO) {
