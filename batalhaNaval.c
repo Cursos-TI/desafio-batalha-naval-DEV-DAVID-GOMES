@@ -54,5 +54,21 @@ int main() {
         }
     }
 
+     // Imprime as letras das colunas (A a J)
+    printf("   ");
+    for (char letra = 'A'; letra < 'A' + TAMANHO_TABULEIRO; letra++) {
+        printf("%c ", letra);
+    }
+    printf("\n");
+
+    // Imprime o tabuleiro com a numeração das linhas (1 a 10)
+    for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
+        printf("%2d ", i + 1); // Linha começa em 1
+        for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
+            printf("%d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
     return 0;
 }
