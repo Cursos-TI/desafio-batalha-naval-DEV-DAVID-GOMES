@@ -21,7 +21,22 @@ int main() {
 
     int linha_vertical = 5;
     int coluna_vertical = 1;
-   
+    
+     // Posiciona navio horizontal, se couber e não sobrepuser
+    if (coluna_horizontal + TAMANHO_NAVIO <= TAMANHO_TABULEIRO) {
+        int pode_posicionar = 1;
+        for (int i = 0; i < TAMANHO_NAVIO; i++) {
+            if (tabuleiro[linha_horizontal][coluna_horizontal + i] == VALOR_NAVIO) {
+                pode_posicionar = 0;
+                break;
+            }
+        }
+        if (pode_posicionar) {
+            for (int i = 0; i < TAMANHO_NAVIO; i++) {
+                tabuleiro[linha_horizontal][coluna_horizontal + i] = VALOR_NAVIO;
+            }
+        }
+    }
 
     return 0;
 }
