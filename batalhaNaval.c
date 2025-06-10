@@ -204,6 +204,11 @@ int main()
     criar_matriz_cone(habilidade_cone);
     criar_matriz_octaedro(habilidade_octaedro);
 
+      // Aplica as habilidades em posições diferentes
+    aplicar_habilidade(tabuleiro, habilidade_cone, 1, 1);        
+    aplicar_habilidade(tabuleiro, habilidade_cruz, 5, 5);        
+    aplicar_habilidade(tabuleiro, habilidade_octaedro, 8, 8);    
+
     // Imprime as letras das colunas (A a J)
     printf("   ");
     for (char letra = 'A'; letra < 'A' + TAMANHO_TABULEIRO; letra++)
