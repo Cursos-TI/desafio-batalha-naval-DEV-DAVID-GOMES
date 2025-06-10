@@ -195,6 +195,15 @@ int main()
         }
     }
 
+    // Matrizes das habilidades
+    int habilidade_cruz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE];
+    int habilidade_cone[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE];
+    int habilidade_octaedro[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE];
+
+    criar_matriz_cruz(habilidade_cruz);
+    criar_matriz_cone(habilidade_cone);
+    criar_matriz_octaedro(habilidade_octaedro);
+
     // Imprime as letras das colunas (A a J)
     printf("   ");
     for (char letra = 'A'; letra < 'A' + TAMANHO_TABULEIRO; letra++)
