@@ -51,6 +51,20 @@ void criar_matriz_cruz(int matriz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE]) {
     }
 }
 
+// Cria uma matriz em formato de cone (triângulo voltado para baixo com base no topo da matriz)
+void criar_matriz_cone(int matriz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE]) {
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (int j = 0; j < TAMANHO_HABILIDADE; j++) {
+            int meio = TAMANHO_HABILIDADE / 2;
+            // Define 1 apenas para os elementos dentro dos limites do "cone"
+            if (j >= meio - i && j <= meio + i && i <= meio)
+                matriz[i][j] = 1;
+            else
+                matriz[i][j] = 0;
+        }
+    }
+}
+
 int main()
 {
     // Declaração do tabuleiro e inicialização com água (0 = água)
