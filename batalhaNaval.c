@@ -65,6 +65,20 @@ void criar_matriz_cone(int matriz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE]) {
     }
 }
 
+// Cria uma matriz em formato de octaedro (diamante), baseado na distância de Manhattan até o centro
+void criar_matriz_octaedro(int matriz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE]) {
+    int centro = TAMANHO_HABILIDADE / 2;
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (int j = 0; j < TAMANHO_HABILIDADE; j++) {
+            // A soma das distâncias absolutas até o centro deve ser menor ou igual ao valor do centro
+            if (abs(i - centro) + abs(j - centro) <= centro)
+                matriz[i][j] = 1;
+            else
+                matriz[i][j] = 0;
+        }
+    }
+}
+
 int main()
 {
     // Declaração do tabuleiro e inicialização com água (0 = água)
