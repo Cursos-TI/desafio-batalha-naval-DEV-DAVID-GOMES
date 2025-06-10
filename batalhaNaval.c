@@ -4,6 +4,8 @@
 #define TAMANHO_NAVIO 3
 #define VALOR_AGUA 0
 #define VALOR_NAVIO 3
+#define VALOR_HABILIDADE 5
+#define TAMANHO_HABILIDADE 5 
 
 int main() {
     // Declaração do tabuleiro e inicialização com água (0 = água)
