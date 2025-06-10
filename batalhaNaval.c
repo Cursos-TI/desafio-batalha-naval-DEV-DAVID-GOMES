@@ -38,6 +38,19 @@ void aplicar_habilidade(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO],
     }
 }
 
+// Cria uma matriz em formato de cruz (linha e coluna central com 1, resto 0)
+void criar_matriz_cruz(int matriz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE]) {
+    int centro = TAMANHO_HABILIDADE / 2;
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (int j = 0; j < TAMANHO_HABILIDADE; j++) {
+            if (i == centro || j == centro)
+                matriz[i][j] = 1; // Linha central ou coluna central
+            else
+                matriz[i][j] = 0;
+        }
+    }
+}
+
 int main()
 {
     // Declaração do tabuleiro e inicialização com água (0 = água)
