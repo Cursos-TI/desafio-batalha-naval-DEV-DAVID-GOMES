@@ -223,7 +223,12 @@ int main()
         printf("%2d ", i + 1); // Linha começa em 1
         for (int j = 0; j < TAMANHO_TABULEIRO; j++)
         {
-            printf("%d ", tabuleiro[i][j]);
+            if (tabuleiro[i][j] == VALOR_AGUA)
+                printf("~ "); // Água
+            else if (tabuleiro[i][j] == VALOR_NAVIO)
+                printf("N "); // Navio
+            else if (tabuleiro[i][j] == VALOR_HABILIDADE)
+                printf("* "); // Área da habilidade
         }
         printf("\n");
     }
